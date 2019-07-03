@@ -1,0 +1,2 @@
+This activity is about utilizing the Google Developer Tools.
+Getting and being comfortable while using it for testing/debugging.
