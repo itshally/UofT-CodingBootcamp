@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>New York Times Search</title>
+
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/b5a3e32bd5.js"></script>
+        
+        <!-- custom css -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- header -->
+        <div class="jumbotron">
+            <h1><i class="fas fa-newspaper"></i>New York Times Search</h1>
+        </div>
+
+        <h4><i class="fas fa-table"></i>Search Parameters</h4>
+
+        <!-- search form -->
+        <div class="form">
+            <!-- search term -->
+            <label for="search">Search Term:</label>
+            <input type="searchterm" class="form-control" id="search" placeholder="Type here" name=".."><br>
+            
+            <!-- number of records -->
+            <label for="records">Number of Records to Retrieve:</label>
+            <input type="recordterm" class="form-control" id="record" placeholder="Type here" name=".."><br>
+
+            <!-- start year -->
+            <label for="start">Start Year (Optional):</label>
+            <input type="startterm" class="form-control" id="startt" placeholder="Type here" name=".."><br>
+
+            <!-- end year -->
+            <label for="end">End Year (Optional):</label>
+            <input type="endterm" class="form-control" id="endd" placeholder="Type here" name=".."><br>
+
+            <!-- buttons -->
+            <div class="buttons">
+                <!-- search button -->
+                <button type="search" class="btn btn-secondary"><i class="fas fa-search"></i>Search</button>
+                <!-- clear button -->
+                <button type="clear" class="btn btn-secondary"><i class="far fa-trash-alt"></i>Clear Results</button>
+            </div>   
+        </div>
+        <br><br>
+
+        <!-- shows result -->
+        <h5><i class="fas fa-table"></i>Top Articles</h5>
+        
+        <!-- result container -->
+        <div class="articles"></div>
+
+        <!-- bootstrap js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- ajax  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- custom js -->
+        <script src="app.js"></script>
+    </body>
+</html>
