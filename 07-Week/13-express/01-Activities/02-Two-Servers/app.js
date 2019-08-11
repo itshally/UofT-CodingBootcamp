@@ -2,19 +2,24 @@ var http = require('http'),
     PORT1 = 7000,
     PORT2 = 7500;
 
-function handleRequest(request, response) {
+function handleRequestOne(request, response) {
     // Send the below string to the client when the user visits the PORT URL
-    response.end("It Works!! Path Hit: " + request.url);
+    response.end("First, solve the problem... ");
+}
+
+function handleRequestTwo(request, response) {
+  // Send the below string to the client when the user visits the PORT URL
+  response.end("Then, write the code. \n -John Johnson");
 }
 
 
 // Use the Node HTTP package to create our server.
 // Pass the handleRequest function to empower it with functionality.
-var server1 = http.createServer(handleRequest);
-var server2 = http.createServer(handleRequest);
+var server1 = http.createServer(handleRequestOne);
+var server2 = http.createServer(handleRequestTwo);
+
 // Start our server so that it can begin listening to client requests.
 server1.listen(PORT1, function() {
-
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT1);
 });
