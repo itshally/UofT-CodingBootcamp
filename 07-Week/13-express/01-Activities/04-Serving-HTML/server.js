@@ -1,0 +1,45 @@
+// Dependencies
+var http = require("http");
+var fs = require("fs");
+
+// Set our port to 8080
+var PORT = 8080;
+
+// Create our server
+var server = http.createServer(handleRequest);
+
+// Create a function for handling the requests and responses coming into our server
+function handleRequest(req, res) {
+
+  // Here we use the fs package to read our index.html file
+  fs.readFile(__dirname + "/index.html", function(err, data) {
+    if (err) throw err;
+    // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
+    // an html file.
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+}
+
+// Starts our server
+server.listen(PORT, function() {
+  console.log("Server is listening on PORT: " + PORT);
+});
+
+
+
+// ----- TESTING -----
+// http.createServer(function(requests, result){
+
+//   // SOURCE: https://nodejs.org/docs/latest/api/modules.html#modules_dirname
+//   // __dirname -> The directory name of the current module. 
+//   fs.readFile(__dirname + '/index.html', function(error, data){
+    
+//     result.writeHead(200, {'Content-Type': 'text/html'});
+//     result.write(data);
+//     result.end();
+//   });
+
+// }).listen(PORT, function(){
+//   console.log('Server is listening to http://localhost:' + PORT);
+// });
